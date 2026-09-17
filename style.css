@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --header-height: 3rem;
+
+  /* Colors */
+  --title-color: #0B0A0A;
+  --text-color: #403A3A;
+  --text-color-light: #233D4D;
+  --container-color: #FAFAFA;
+  --container-color-alt: #F0EFEF;
+  --body-color: #FCFCFC;
+  --accent: #FE7F2D;
+  --link-color: #0b57d0;
+
+  /* Fonts and typography */
+  --body-font: 'Noto Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;  
+  
+  /* Margines */
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--body-color);
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+h1 {
+  font-weight: var(--font-semi-bold);
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+#profile {
+  display: block;
+  width: min(100%, 30rem);
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0 auto 2rem;
+}
+
+.resume-left,
+.resume-right {
+  color: var(--text-color);
+  padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+.resume-left {
+  background-color: var(--container-color);
+  flex: 0 1 30%;
+}
+
+.resume-right {
+  background-color: var(--container-color-alt);
+  flex: 1 1 70%;
+}
+
+.right-side {
+  margin-left: auto;
+}
+
+main {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  width: min(100%, 1440px);
+  min-height: min(820px, calc(100vh - 4rem));
+  max-width: 1440px;
+  margin: 0 auto; 
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(64, 58, 58, 0.12);
+}
+
+.section-title {
+  color: var(--text-color-light);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--link-color)
+}
+
+a:hover  {
+  text-decoration: underline;
+}
+
+.edu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+ul {
+  padding-left: 1rem;
+}
+
+li, p {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  main{
+    flex-direction: column;
+    min-height: 0;
+    box-shadow: none;
+  }
+
+  #profile {
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  .resume-left,
+  .resume-right {
+    padding: 2rem 1.5rem;
+  }
+}
